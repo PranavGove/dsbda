@@ -1,0 +1,38 @@
+Df=pd.read_csv(path)
+
+Df.isnull().sum()
+
+Df.describe()
+
+Df1=df.copy()
+
+Df1.fillna(0,inplace=True)
+
+Df1
+
+Df.ffill
+
+Df.bfill
+
+Df=df["age"].fillna(df["age"].mean())
+
+sns.boxplot(x=df[age])
+plt.title(f'Boxplot of {c}')
+plt.show()
+
+
+import numpy as np
+
+# Calculate Q1, Q3, and IQR
+q1 = df7['c'].quantile(0.25)
+q3 = df7['c'].quantile(0.75)
+iqr = q3 - q1
+
+# Define lower and upper bounds
+lower_bound = q1 - 1.5 * iqr
+upper_bound = q3 + 1.5 * iqr
+
+# Filter out outliers
+df7 = df7[(df7['c'] >= lower_bound) & (df7['c'] <= upper_bound)]
+
+
